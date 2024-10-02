@@ -4,8 +4,12 @@ return {
 		tag = "0.1.8",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
+			"jonarrien/telescope-cmdline.nvim",
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 			"nvim-tree/nvim-web-devicons",
+		},
+		keys = {
+			{ ":", "<cmd>Telescope cmdline<cr>", desc = "Cmdline" },
 		},
 		config = function()
 			local telescope = require("telescope")

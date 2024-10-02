@@ -6,7 +6,6 @@ return {
 			"nvim-treesitter/nvim-treesitter-textobjects",
 		},
 		build = ":TSUpdate",
-		event = "VeryLazy",
 		lazy = vim.fn.argc(-1) == 0,
 		main = "nvim-treesitter.configs",
 		opts = {
@@ -19,7 +18,10 @@ return {
 				"luadoc",
 				"python",
 				"rust",
+				"markdown",
+				"markdown_inline",
 			},
+			auto_install = true,
 			highlight = { enable = true },
 			indent = { enable = true },
 			textobjects = {
@@ -37,4 +39,3 @@ return {
 		},
 	},
 }
-
