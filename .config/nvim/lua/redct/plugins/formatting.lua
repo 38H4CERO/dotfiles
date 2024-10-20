@@ -1,7 +1,6 @@
 return {
 	{
 		"stevearc/conform.nvim",
-		branch = "nvim-0.9", --Necesita nvim 0.10 para quitar esto
 		event = { "BufReadPre", "BufNewFile" },
 		config = function()
 			local conform = require("conform")
