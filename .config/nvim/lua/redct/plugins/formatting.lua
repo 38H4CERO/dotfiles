@@ -11,7 +11,7 @@ return {
 					typescript = { "prettier" },
 					javascriptreact = { "prettier" },
 					typescriptreact = { "prettier" },
-					c = { "prettier" },
+					c = { "clang-format" },
 					css = { "prettier" },
 					html = { "prettier" },
 					json = { "prettier" },
