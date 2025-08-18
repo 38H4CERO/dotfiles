@@ -65,10 +65,14 @@
   hardware.graphics = { enable = true; };
 
   # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [ "amdgpu" "nvidia" ];
 
   hardware.nvidia = {
-
+    prime = {
+      offload.enable = true;
+      amdgpuBusId = "PCI:5:0:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
     # Modesetting is required.
     modesetting.enable = true;
 
