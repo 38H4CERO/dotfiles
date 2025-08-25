@@ -10,14 +10,21 @@
 
   # Habilita el gestor de inicio de sesión
   services.displayManager = {
+    enable = true;
     defaultSession = "hyprland-uwsm";
+
     sddm = {
       enable = true;
       wayland.enable = true;
-      # theme = "sddm-astronaut-theme";
+      package = pkgs.kdePackages.sddm;
+      extraPackages = with pkgs; [
+        kdePackages.qtsvg
+        kdePackages.qtmultimedia
+        kdePackages.qtvirtualkeyboard
+      ];
+      theme = "sddm-astronaut-theme";
     };
   };
-
   environment.sessionVariables = {
     # Hint electron apps to use wayland
     NIXOS_OZONE_WL = "1";

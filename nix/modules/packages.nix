@@ -40,5 +40,20 @@
     gimp
     imagemagick
     ripgrep
+    zulu # java21
+    dunst
+    pamixer
+    brightnessctl
+    nodejs
+    sddm-astronaut
+    networkmanager
   ];
+  programs = {
+    steam = {
+      enable = true;
+      remotePlay.openFirewall = true; # For Steam Remote Play
+      dedicatedServer.openFirewall = true; # For Source Dedicated Server hosting
+    };
+    gamemode.enable = true;
+  };
 }
