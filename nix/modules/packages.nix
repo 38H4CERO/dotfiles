@@ -31,11 +31,13 @@
     rustc
     uv # python
     quickshell
+    quickemu # VM
     wofi
+    qbittorrent
     kdePackages.dolphin
     hyprpaper
+    ffmpeg
     hyprcursor
-    tree
     feh # image preview
     gimp
     imagemagick
@@ -47,6 +49,7 @@
     nodejs
     sddm-astronaut
     networkmanager
+    eza
   ];
   programs = {
     steam = {
@@ -56,4 +59,5 @@
     };
     gamemode.enable = true;
   };
+  virtualisation.waydroid.enable = true;
 }
