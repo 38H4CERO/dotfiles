@@ -5,6 +5,10 @@
     firefox
     git
     vesktop
+    (discord.override {
+      withVencord = true;
+      withOpenASAR = true;
+    })
     curl
     gcc
     neovim
@@ -35,6 +39,7 @@
     wofi
     qbittorrent
     kdePackages.dolphin
+    nautilus
     hyprpaper
     ffmpeg
     hyprcursor
