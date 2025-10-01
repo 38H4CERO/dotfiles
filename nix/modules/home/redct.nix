@@ -14,6 +14,8 @@ in {
     x11.enable = true;
   };
 
+  services.easyeffects.enable = true; # mic
+
   imports = [ inputs.spicetify-nix.homeManagerModules.default ];
 
   # 2. Activamos y configuramos spicetify
