@@ -1,14 +1,9 @@
-{ pkgs, ... }:
-
-{
+{ pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     firefox
+    chromium
     git
     vesktop
-    (discord.override {
-      withVencord = true;
-      withOpenASAR = true;
-    })
     curl
     gcc
     neovim
@@ -55,14 +50,31 @@
     sddm-astronaut
     networkmanager
     eza
+    mangohud
+    mangojuice
+    protonup-qt
+    vscode
+    ## TFG
+    sqlite
+    protonvpn-gui
   ];
   programs = {
+    gamescope = {
+      enable = true;
+      capSysNice = true;
+    };
     steam = {
       enable = true;
       remotePlay.openFirewall = true; # For Steam Remote Play
       dedicatedServer.openFirewall = true; # For Source Dedicated Server hosting
+      gamescopeSession.enable = true;
     };
     gamemode.enable = true;
+
+    dconf.enable = true; # eassyeffect dependency (mic)
+    ydotool.enable = true; # autoclick
   };
+
   virtualisation.waydroid.enable = true;
 }
+
