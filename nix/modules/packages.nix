@@ -56,6 +56,8 @@
     vscode
     ## TFG
     sqlite
+    whois
+    dig
     protonvpn-gui
   ];
   programs = {
@@ -72,7 +74,6 @@
     gamemode.enable = true;
 
     dconf.enable = true; # eassyeffect dependency (mic)
-    ydotool.enable = true; # autoclick
   };
 
   virtualisation.waydroid.enable = true;

@@ -50,7 +50,10 @@
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  services.blueman.enable = true;
+  services = {
+    blueman.enable = true;
+    power-profiles-daemon.enable = true;
+  };
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
