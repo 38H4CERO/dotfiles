@@ -30,7 +30,6 @@
     rustc
     uv # python
     quickshell
-    quickemu # VM
     wofi
     qbittorrent
     kdePackages.dolphin
@@ -54,6 +53,7 @@
     mangojuice
     protonup-qt
     vscode
+    lazygit
     ## TFG
     sqlite
     whois
@@ -74,8 +74,7 @@
     gamemode.enable = true;
 
     dconf.enable = true; # eassyeffect dependency (mic)
-  };
 
-  virtualisation.waydroid.enable = true;
+  };
 }
 
