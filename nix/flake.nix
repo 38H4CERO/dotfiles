@@ -16,7 +16,7 @@
 
   };
 
-  outputs = { self, nixpkgs, home-manager, spicetify-nix, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, spicetify-nix,  ... }@inputs:
     let system = "x86_64-linux";
     in {
       nixosConfigurations = {

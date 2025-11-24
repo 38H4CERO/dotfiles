@@ -6,7 +6,18 @@
     vesktop
     curl
     gcc
+
+    #vim
     neovim
+    wget
+    go
+    luarocks
+    bash
+    python313Packages.pip
+    tree-sitter
+    ruff
+    pyright
+
     ghostty
     prismlauncher
     btop
@@ -14,12 +25,14 @@
     pavucontrol
     playerctl
     tmux
+    scrcpy
     python3
     lua
     fzf
     fd
     bat
     unzip
+    zip
     tldr
     mpv
     ani-cli
@@ -53,14 +66,20 @@
     mangojuice
     protonup-qt
     vscode
+    antigravity-fhs
     lazygit
+    nvitop # nvidia btop
+    kdePackages.kate
     ## TFG
+    filezilla
+    bruno
     sqlite
     whois
     dig
     protonvpn-gui
   ];
   programs = {
+    obs-studio.enable = true;
     gamescope = {
       enable = true;
       capSysNice = true;

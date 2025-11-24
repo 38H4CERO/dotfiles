@@ -19,22 +19,25 @@ in {
   imports = [ inputs.spicetify-nix.homeManagerModules.default ];
 
   # 2. Activamos y configuramos spicetify
-  programs.spicetify = {
-    enable = true;
-    enabledExtensions = with spicePkgs.extensions; [
-      adblockify
-      hidePodcasts
-      volumePercentage
-    ];
+  programs = {
+    spicetify = {
+      enable = true;
+      enabledExtensions = with spicePkgs.extensions; [
+        adblockify
+        hidePodcasts
+        volumePercentage
+      ];
 
-    enabledCustomApps = with spicePkgs.apps; [ marketplace ];
-    theme = spicePkgs.themes.burntSienna;
-    enabledSnippets = [
-      # RemoveGradient
-      ".main-entityHeader-backgroundColor { display: none !important; } .main-actionBarBackground-background { display: none !important; } .main-home-homeHeader { display: none !important; }"
-    ];
-    # Puedes añadir extensiones aquí si quieres en el futuro
-    #extensions = with pkgs.spicetify-extensions; [ marketplace adblock ];
+      enabledCustomApps = with spicePkgs.apps; [ marketplace ];
+      theme = spicePkgs.themes.burntSienna;
+      enabledSnippets = [
+        # RemoveGradient
+        ".main-entityHeader-backgroundColor { display: none !important; } .main-actionBarBackground-background { display: none !important; } .main-home-homeHeader { display: none !important; }"
+      ];
+      # Puedes añadir extensiones aquí si quieres en el futuro
+      #extensions = with pkgs.spicetify-extensions; [ marketplace adblock ];
+    };
+
   };
 
   home.packages = with pkgs;
