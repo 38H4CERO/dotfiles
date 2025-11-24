@@ -67,6 +67,7 @@
     protonup-qt
     vscode
     antigravity-fhs
+    blockbench
     lazygit
     nvitop # nvidia btop
     kdePackages.kate
