@@ -69,8 +69,11 @@
     antigravity-fhs
     blockbench
     lazygit
+    pinta
+    freefilesync
     nvitop # nvidia btop
     kdePackages.kate
+    mindustry-wayland
     ## TFG
     filezilla
     bruno
