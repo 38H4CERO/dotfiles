@@ -53,6 +53,7 @@
   services = {
     blueman.enable = true;
     power-profiles-daemon.enable = true;
+    tailscale.enable = true; #RaspBerry vpn
   };
   hardware.bluetooth = {
     enable = true;

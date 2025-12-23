@@ -46,7 +46,5 @@ in {
       #inputs.viu.packages.${pkgs.system}.default
 
     ];
-  # Bloque 2: Configuración de Spotify (de Home Manager).
-  # Spicetify encontrará y usará esta configuración.
   home.stateVersion = "25.05"; # O la versión que te corresponda
 }

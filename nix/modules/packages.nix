@@ -17,7 +17,14 @@
     tree-sitter
     ruff
     pyright
-
+    
+    #hypr
+    hyprpwcenter
+    hyprlauncher
+    hyprpaper
+    hyprcursor
+    #hyprshutdown
+    
     ghostty
     prismlauncher
     btop
@@ -47,9 +54,7 @@
     qbittorrent
     kdePackages.dolphin
     nautilus
-    hyprpaper
     ffmpeg
-    hyprcursor
     feh # image preview
     gimp
     imagemagick
@@ -64,6 +69,7 @@
     eza
     mangohud
     mangojuice
+    man-pages
     protonup-qt
     vscode
     antigravity-fhs
