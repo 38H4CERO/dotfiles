@@ -29,7 +29,7 @@ in {
       ];
 
       enabledCustomApps = with spicePkgs.apps; [ marketplace ];
-      theme = spicePkgs.themes.burntSienna;
+      #theme = spicePkgs.themes.burntSienna;
       enabledSnippets = [
         # RemoveGradient
         ".main-entityHeader-backgroundColor { display: none !important; } .main-actionBarBackground-background { display: none !important; } .main-home-homeHeader { display: none !important; }"

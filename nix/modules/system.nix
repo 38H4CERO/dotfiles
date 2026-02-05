@@ -54,6 +54,7 @@
     blueman.enable = true;
     power-profiles-daemon.enable = true;
     tailscale.enable = true; #RaspBerry vpn
+    flatpak.enable = true;
   };
   hardware.bluetooth = {
     enable = true;

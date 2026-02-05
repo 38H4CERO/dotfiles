@@ -29,6 +29,23 @@
     # Hint electron apps to use wayland
     NIXOS_OZONE_WL = "1";
   };
+  
+  # Open with in dolphin
+  xdg.portal = {
+    enable = true;
+    config = {
+      hyprland = {
+        default = [
+          "hyprland"
+          "kde"
+        ];
+      };
+    };
+    configPackages = with pkgs; [
+      xdg-desktop-portal-hyprland
+      kdePackages.xdg-desktop-portal-kde
+    ];
+  };
 
   hardware = {
     graphics.enable = true;

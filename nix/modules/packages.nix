@@ -8,6 +8,7 @@
     gcc
 
     #vim
+    helix # probando
     neovim
     wget
     go
@@ -42,6 +43,7 @@
     zip
     tldr
     mpv
+    r2modman
     ani-cli
     wl-clipboard
     grim
