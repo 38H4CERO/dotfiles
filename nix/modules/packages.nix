@@ -4,6 +4,7 @@
     chromium
     git
     vesktop
+    discord
     curl
     gcc
 
@@ -40,6 +41,8 @@
     fd
     bat
     unzip
+    fastfetch
+    dutree
     zip
     tldr
     mpv
@@ -61,6 +64,8 @@
     gimp
     imagemagick
     ripgrep
+    yt-dlp
+    rsync
     zulu # java21
     dunst
     pamixer
@@ -69,6 +74,7 @@
     sddm-astronaut
     networkmanager
     eza
+    heroic
     mangohud
     mangojuice
     man-pages
@@ -78,6 +84,7 @@
     blockbench
     lazygit
     pinta
+    ncdu # mb en una carpeta
     freefilesync
     nvitop # nvidia btop
     kdePackages.kate
@@ -89,6 +96,7 @@
     whois
     dig
     protonvpn-gui
+    opencode
   ];
   programs = {
     obs-studio.enable = true;
