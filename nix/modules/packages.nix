@@ -64,6 +64,7 @@
     gimp
     imagemagick
     ripgrep
+    jq
     yt-dlp
     rsync
     zulu # java21
@@ -75,15 +76,20 @@
     networkmanager
     eza
     heroic
+    aseprite
+    oxipng
     mangohud
     mangojuice
     man-pages
     protonup-qt
     vscode
     antigravity-fhs
+    zed-editor
+    jetbrains.idea
     blockbench
     lazygit
     pinta
+    yad
     ncdu # mb en una carpeta
     freefilesync
     nvitop # nvidia btop
@@ -96,7 +102,15 @@
     whois
     dig
     protonvpn-gui
+    
     opencode
+    gemini-cli
+    qwen-code
+    
+    ## go
+    go
+    gopls
+    go-tools
   ];
   programs = {
     obs-studio.enable = true;
@@ -111,9 +125,17 @@
       gamescopeSession.enable = true;
     };
     gamemode.enable = true;
+    
 
+    nix-ld.enable = true; # Dinamyc link executables
     dconf.enable = true; # eassyeffect dependency (mic)
 
   };
+  services.ollama = {
+    enable = true;
+    loadModels = ["qwen2.5-coder:7b"];
+    package = pkgs.ollama-vulkan;
+  };
+
 }
 
