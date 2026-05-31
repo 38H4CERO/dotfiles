@@ -127,7 +127,9 @@
     gamemode.enable = true;
     
 
-    nix-ld.enable = true; # Dinamyc link executables
+    nix-ld = {
+      enable = true; # Dinamyc link executables
+    };
     dconf.enable = true; # eassyeffect dependency (mic)
 
   };
