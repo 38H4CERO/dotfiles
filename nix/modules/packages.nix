@@ -4,7 +4,8 @@
     chromium
     git
     vesktop
-    discord
+    vencord
+    (discord.override {withVencord = true;})
     curl
     gcc
 
