@@ -1,6 +1,0 @@
-require("redct/misc")
-require("redct/monitors")
-require("redct/autostarts")
-require("redct/keybinds")
-require("redct/window_rules")
-require("redct/colors")
