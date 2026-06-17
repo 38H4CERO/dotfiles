@@ -37,6 +37,7 @@
     tmux
     scrcpy
     python3
+    stow
     lua
     fzf
     fd
