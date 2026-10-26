@@ -11,6 +11,7 @@ in {
     name = "Bibata-Modern-Classic";
     package = pkgs.bibata-cursors;
     size = 24;
+    enable = true;
     x11.enable = true;
   };
 

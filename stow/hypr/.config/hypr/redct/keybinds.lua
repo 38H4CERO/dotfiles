@@ -14,6 +14,7 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp -c 00000000 -b 00000070)" - | wl-copy'))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("bash ~/.config/scripts/prism.sh"))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("drawy"))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
 
 -- Full screen no maximize
@@ -45,10 +46,10 @@ end)
 
 -- zoom
 hl.bind(mainMod .. " + Z", zoom)
-hl.bind(mainMod .. " + mouse_down", function()
+hl.bind(mainMod .. " + mouse_up", function()
 	zoom(0.5)
 end, { auto_consuming = true })
-hl.bind(mainMod .. " + mouse_up", function()
+hl.bind(mainMod .. " + mouse_down", function()
 	zoom(-0.5)
 end, { auto_consuming = true })
 

@@ -54,6 +54,10 @@
     power-profiles-daemon.enable = true;
     tailscale.enable = true; #RaspBerry vpn
     flatpak.enable = true;
+    udisks2 = {
+      enable = true;
+      mountOnMedia = true;
+    };
   };
   hardware.bluetooth = {
     enable = true;
@@ -66,7 +70,10 @@
   };
 
   # Enable OpenGL
-  hardware.graphics = { enable = true; };
+  hardware.graphics = { 
+    enable = true;
+    enable32Bit = true;
+  };
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = [ "amdgpu" "nvidia" ];

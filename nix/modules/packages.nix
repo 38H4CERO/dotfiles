@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     firefox
     chromium
+    brave-origin
     git
     vesktop
     vencord
@@ -29,7 +30,15 @@
     #hyprshutdown
     
     ghostty
-    prismlauncher
+    (prismlauncher.override {
+      additionalLibs = [
+       libxi
+       libxrender
+       libxtst
+       libxkbcommon
+       libdecor
+      ];
+    })
     btop
     waybar
     pavucontrol
@@ -48,6 +57,7 @@
     zip
     tldr
     mpv
+    nmgui
     r2modman
     ani-cli
     wl-clipboard
@@ -85,29 +95,36 @@
     man-pages
     protonup-qt
     vscode
-    antigravity-fhs
     zed-editor
     jetbrains.idea
     blockbench
     lazygit
     pinta
+    drawy
     yad
+    kdePackages.okular
+    nethogs # internet monitor
+    iftop # internet monitor
     ncdu # mb en una carpeta
     freefilesync
     nvitop # nvidia btop
     kdePackages.kate
-    mindustry-wayland
+    oci-cli
+    kitty
+    starship
+    moonlight-qt
+    nnn
+    melonds
+
     ## TFG
     filezilla
     bruno
     sqlite
     whois
     dig
-    protonvpn-gui
+    proton-vpn
     
     opencode
-    gemini-cli
-    qwen-code
     
     ## go
     go
@@ -135,11 +152,8 @@
     dconf.enable = true; # eassyeffect dependency (mic)
 
   };
-  services.ollama = {
-    enable = true;
-    loadModels = ["qwen2.5-coder:7b"];
-    package = pkgs.ollama-vulkan;
-  };
+  virtualisation.waydroid.enable = true;
+  networking.nftables.enable = true;
 
 }
 
