@@ -13,21 +13,22 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
   };
 
-  outputs = { self, nixpkgs, home-manager, spicetify-nix,  ... }@inputs:
-    let system = "x86_64-linux";
-    in {
-      nixosConfigurations = {
-        nixos = nixpkgs.lib.nixosSystem {
-          inherit system;
-          specialArgs = {
-            inherit inputs;
-          }; # Hace los 'inputs' accesibles en otros módulos.
-          modules =
-            [ home-manager.nixosModules.home-manager ./configuration.nix ];
-        };
-      };
+  outputs = { nixpkgs, home-manager, ... }@inputs: {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = { inherit inputs; }; # Hace los 'inputs' accesibles en otros módulos.
+      modules = [
+        ./configuration.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true; # usa el nixpkgs del sistema (allowUnfree incluido)
+          home-manager.useUserPackages = true;
+          home-manager.extraSpecialArgs = { inherit inputs; };
+          home-manager.users.redct = import ./modules/home;
+        }
+      ];
     };
+  };
 }

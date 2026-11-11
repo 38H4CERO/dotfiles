@@ -36,6 +36,16 @@ hl.window_rule({
 	--monitor = "HDMI-A-1 silent"
 })
 
+-- Love2D
+hl.window_rule({
+	name = "windowed-love2d-game",
+	match = {
+		initial_class = "love",
+	},
+	float = true,
+	center = true,
+})
+
 -------------------
 -- DEFAULT RULES --
 -------------------

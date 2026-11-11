@@ -16,6 +16,7 @@ hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp -c 00000000
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("bash ~/.config/scripts/prism.sh"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("drawy"))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("loginctl lock-session"))
 
 -- Full screen no maximize
 hl.bind(mainMod .. " + F", function()
@@ -52,6 +53,9 @@ end, { auto_consuming = true })
 hl.bind(mainMod .. " + mouse_down", function()
 	zoom(-0.5)
 end, { auto_consuming = true })
+
+-- Blank workspaces
+hl.bind(mainMod .. " + Escape", toggle_blank_workspaces)
 
 -- Spotify
 hl.bind("CTRL + ALT + SPACE", hl.dsp.exec_cmd(" playerctl play-pause --player=spotify"))

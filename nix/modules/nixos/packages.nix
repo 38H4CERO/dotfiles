@@ -2,11 +2,9 @@
   environment.systemPackages = with pkgs; [
     firefox
     chromium
-    brave-origin
     git
     vesktop
-    vencord
-    (discord.override {withVencord = true;})
+    (discord.override {withVencord = false;})
     curl
     gcc
 
@@ -14,31 +12,20 @@
     helix # probando
     neovim
     wget
-    go
     luarocks
-    bash
-    python313Packages.pip
     tree-sitter
     ruff
     pyright
-    
+
     #hypr
     hyprpwcenter
     hyprlauncher
     hyprpaper
     hyprcursor
+    hyprpolkitagent
     #hyprshutdown
-    
+
     ghostty
-    (prismlauncher.override {
-      additionalLibs = [
-       libxi
-       libxrender
-       libxtst
-       libxkbcommon
-       libdecor
-      ];
-    })
     btop
     waybar
     pavucontrol
@@ -58,7 +45,6 @@
     tldr
     mpv
     nmgui
-    r2modman
     ani-cli
     wl-clipboard
     grim
@@ -67,7 +53,10 @@
     rustc
     uv # python
     quickshell
+    claude-code
     wofi
+    love # love2d lua 2d engine
+    difftastic
     qbittorrent
     kdePackages.dolphin
     nautilus
@@ -84,16 +73,10 @@
     pamixer
     brightnessctl
     nodejs
-    sddm-astronaut
-    networkmanager
     eza
-    heroic
     aseprite
     oxipng
-    mangohud
-    mangojuice
     man-pages
-    protonup-qt
     vscode
     zed-editor
     jetbrains.idea
@@ -112,9 +95,7 @@
     oci-cli
     kitty
     starship
-    moonlight-qt
     nnn
-    melonds
 
     ## TFG
     filezilla
@@ -123,9 +104,9 @@
     whois
     dig
     proton-vpn
-    
+
     opencode
-    
+
     ## go
     go
     gopls
@@ -133,27 +114,12 @@
   ];
   programs = {
     obs-studio.enable = true;
-    gamescope = {
-      enable = true;
-      capSysNice = true;
-    };
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true; # For Steam Remote Play
-      dedicatedServer.openFirewall = true; # For Source Dedicated Server hosting
-      gamescopeSession.enable = true;
-    };
-    gamemode.enable = true;
-    
-
     nix-ld = {
       enable = true; # Dinamyc link executables
     };
     dconf.enable = true; # eassyeffect dependency (mic)
-
   };
   virtualisation.waydroid.enable = true;
-  networking.nftables.enable = true;
-
+  networking.nftables.enable = true; # waydroid networking needs nftables
 }
 

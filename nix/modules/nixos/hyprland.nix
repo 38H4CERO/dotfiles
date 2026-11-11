@@ -2,11 +2,16 @@
 
 {
   # Habilita el compositor Hyprland a nivel de sistema
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-    xwayland.enable = true;
+  programs = {
+    hyprland = {
+        enable = true;
+        withUWSM = true;
+        xwayland.enable = true;
+    };
+
+    hyprlock.enable = true;
   };
+  services.hypridle.enable = true;
 
   # Habilita el gestor de inicio de sesión
   services.displayManager = {
@@ -25,6 +30,8 @@
       theme = "sddm-astronaut-theme";
     };
   };
+  environment.systemPackages = [ pkgs.sddm-astronaut ];
+
   environment.sessionVariables = {
     # Hint electron apps to use wayland
     NIXOS_OZONE_WL = "1";
@@ -45,16 +52,5 @@
       xdg-desktop-portal-hyprland
       kdePackages.xdg-desktop-portal-kde
     ];
-  };
-
-  hardware = {
-    # Most wayland compositors need this
-    nvidia.modesetting.enable = true;
-  };
-
-  # Teclado para Xwayland
-  services.xserver.xkb = {
-    layout = "es";
-    variant = "nodeadkeys";
   };
 }
